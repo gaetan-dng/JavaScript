@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>main</title>
+    </head>
+    <body>
+<!--=========================================================-->
+        <p>EXO1</p>
+        <input type="button" id="btn" onclick="surfaceRectangle()">
+        <script>
+                function surfaceRectangle() {
+                    var largeur; var longueur;
+                    largeur=prompt("Quelle est la largeur du rectangle ?");
+                    longueur=prompt("Quelle est la longueur du rectangle ?");
+                    alert("La surface vaut "+longueur*largeur);
+                    alert("Le périmètre vaut "+2*(Number(longueur)+Number(largeur))); 
+                } 
+        </script>
+        
+        <hr>
+<!--=========================================================-->
+        <p>EXO2</p>
+        <input type="button" id="btn" onclick="alert('Surface du cercle : '+perimetreCercle())">
+        <script>
+                function perimetreCercle() {
+                    var rayon=parseFloat(prompt("Entrez le rayon du cercle : "));
+                    return 3.14*rayon*rayon;
+                }
+        </script>
+
+        <hr>
+<!--=========================================================-->
+        <p>EXO3</p>
+        <input type="button" id="btn" onclick="afficheExo3()">
+        <script>
+                var a=3;
+                var b=-2;
+
+                function multiplie(x=8)
+                {
+                    return 3*x;
+                }
+
+                function afficheExo3()
+                {
+                    alert(multiplie(a));
+                    alert(multiplie(b));
+                }
+        </script>
+
+        <hr>
+<!--=========================================================-->
+        <p>EXO4</p>
+        <input type="button" id="btn" onclick="afficheExo4()">
+        <script>
+            var tab=[-2,1,4];
+
+            function additionne(x)
+            {
+                return (x+2);
+            }
+            function afficheExo4()
+            {
+                alert(additionne(tab[0]));
+                alert(additionne(tab[tab.length-1]));
+            }
+        </script>
+
+        <hr>
+<!--=========================================================-->
+        <p>EXO5</p>
+        <button onclick="boucle()">Cliquez-moi!</button>
+        <button onclick="boucle2()">Cliquez-moi aussi!</button>
+        <script>
+            function boucle()
+            {
+                var tab = new Array(5);
+                for (var i=0;i<tab.length;i++)
+                {
+                    tab[i]=i*i;
+                }
+                    alert(tab);
+            }
+
+            function boucle2()
+            {
+                var longueur=parseInt(prompt('Quelle est la longueur souhaitée du tableau?'));
+                var tab= new Array();
+                for (var i=0;i<longueur;i++)
+                {
+                    tab[i]=i*i;
+                }
+                alert(tab);
+            } 
+        </script>
+
+        <hr>
+<!--=========================================================-->
+        <p>EXO6</p>
+        <button onclick="afficheExo6()">Lancer la fonction</button> 
+        <script>    
+            var tab=[-2,1,4];
+
+            function soustrait(x)
+            {
+                if (x >= 0) return (x-2); else return "Nombre négatif !";
+            }
+
+            function afficheExo6()
+            {
+                alert(soustrait(tab[0]));
+                alert(soustrait(tab[tab.length-1]));
+            }
+        </script>
+
+        <hr>
+<!--=========================================================-->
+        <p>EXO7</p>
+        <button onclick="jourDeLaSemaine()">Lancer la fonction</button></p>
+        <script>    
+            function jourDeLaSemaine()
+            {
+                var aujourdhui= new Date;
+                jour=aujourdhui.getDay();
+                var jourFrancais ;
+                switch (jour) 
+                {
+                    case 0 : jourFrancais="dimanche";break;
+                    case 1 : jourFrancais="lundi";break;
+                    case 2 : jourFrancais="mardi";break;
+                    case 3 : jourFrancais="mercredi";break;
+                    case 4 : jourFrancais="jeudi";break;
+                    case 5 : jourFrancais="vendredi";break;
+                    case 6 : jourFrancais="samedi";break;
+                    default: jourFrancais="jour inexistant"; break;
+                }
+                    alert("Nous sommes "+jourFrancais+".");
+            }
+        </script>
+
+        <hr>
+<!--=========================================================-->
+        <p>EXO8</p>
+        <p onmouseover="this.style.color='blue'", onclick="this.style.color='lime'", ondblclick="this.style.color='navy'">Cliquez-ici </p>
+        <script> 
+
+        </script>
+
+        <hr>
+<!--=========================================================-->
+        <p>EXO9</p>
+        <p this.style.width='500px'; 
+        onclick="style.textAlign='center', style.marginRight='1000px', style.marginLeft='1000px'"
+        ondblclick="style.marginRight='0px', style.marginLeft='0px', style.textAlign='left'">
+            Si tu ne comprends pas, ou ne maîtrises pas, 
+            la notion de coefficient binomial, 
+            inutile de chercher à calculer toi-même les nombres de Catalan, 
+            que tu découvris dans cette obscure revue américaine d'algèbre, 
+            croyant qu'il s'agissait de “nombres catalans” 
+            (l'anglais Catalan numbers est équivoque), 
+            avant de faire le chemin historique et de découvrir 
+            qu'ils auraient tout aussi bien pu se nommer suite d'Euler, 
+            entiers de Seger, ou nombres de Ming Antu.</p>
+        <script> 
+
+        </script>
+
+        <hr>
+<!--=========================================================-->
+        <p>EXO10</p>
+        <img src="img1.jpg" boarder="0px" width="256px" height="256px" 
+        onMouseOver="MouseRollover(this)" 
+        onMouseOut="MouseOut(this)" />
+        <script> 
+            function MouseRollover(MyImage) 
+            {
+                MyImage.src = "img1.jpg";
+            }
+            function MouseOut(MyImage) 
+            {
+                MyImage.src = "img2.jpg";
+            }
+        </script>
+
+        <hr>
+<!--=========================================================-->
+        <p>EXO11</p>
+        
+        <h1 id="exo11">
+
+        </h1>
+
+        <script> 
+
+            function modif_paragraphe() {
+                
+                getElementById("exo11")
+            
+            }
+
+        </script>
+
+        <hr>
+<!--=========================================================-->
+        <p>EXO12</p>
+        <button onclick="openWin()">Open window </button>
+        <button onclick="moveWin()">Move window </button>
+        <button onclick="moveWinRelative()">Move window relative</button>
+        <button onclick="resizeWin()">Resize window</button>
+        <script> 
+                        
+            var myWindow;
+
+            function openWin() 
+            {
+            myWindow = window.open("", "myWindow", "width=200, height=200");
+            myWindow.document.write("<p>Hello I am window </p>");
+            }
+
+            function moveWin() 
+            {
+            myWindow.moveBy(50, 50);
+            myWindow.focus();
+            }
+
+            function moveWinRelative() 
+            {
+            myWindow.moveBy(-50, -50);
+            myWindow.focus();
+            }
+
+            function resizeWin() 
+            {
+                myWindow.resizeTo(300, 100);
+                myWindow.focus();
+            }
+
+        </script>
+
+        <hr>
+<!--=========================================================-->
+        <p>EXO13</p>
+        
+        <script> 
+
+            /*var navigator = new Object()
+
+            navigator[]*/
+        </script>
+
+        <hr>
+<!--=========================================================-->
+        <p>EXO14</p>
+        
+        <form>
+            <div class="controls">
+                <label for="idprenom">Prénom:</label>
+                <input type="text" value="Gaetan" id="idprenom" name="idprenom" />
+                <label for="idnom">Nom:</label>
+                <input type="text" value="Deneufgermain" id="idnom" name="idnom" />
+                <label for="idage">Age</label>
+                <input type="text" value="18" id="idage" name="idage" />
+    
+                <input type="reset" value="Reset">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+
+        <script> 
+
+        </script>
+
+        <hr>
+<!--=========================================================-->
+        <p>EXO15</p>
+        
+        <script> 
+            
+        </script>
+
+        <hr>
+        
+<!--=========================================================-->
+
+        <p>BONUS</p>
+
+        <script> 
+            
+        </script>
+        
+        <hr>
+
+    </body>
+</html>
